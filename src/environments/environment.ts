@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  AUTH_PATH: 'http://localhost:4200/assets/json/',
+  AUTH_PATH: '../assets/json/',
   USER_PATH: 'https://randomuser.me/api/0.8/?results=20'
 };
 
