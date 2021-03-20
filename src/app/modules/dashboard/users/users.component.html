@@ -1,0 +1,20 @@
+<div class="user-container">
+    <div class="input-container">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search By User Id" (ngModelChange)="searchUser()" [(ngModel)]="search">
+        </div>
+        <button type="button" class="btn btn-primary custom-btn" (click)="userAdd()">Add a User</button>
+        <button type="button" class="btn btn-primary custom-btn" (click)="logout()">Logout</button>
+    </div>
+    <div class="list-container">
+        <div *ngFor="let user of users" class="user-item">
+            Name: {{user.title}}
+            {{user.firstname}}
+            {{user.lastname}} <br>
+            DOB: {{user.dob*1000 | date: 'mediumDate'}} <br>
+            Phone: {{user.phone}} <br>
+            Gender: {{user.gender}} <br>
+            UserID: {{user.username}} <br>
+        </div>
+    </div>
+</div>
